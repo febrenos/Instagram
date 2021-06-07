@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The remove() Method</h1>
+
+<p>The remove() method removes the element from the DOM.</p>
+
+<p id="input">Click the button, and this paragraph will be removed from the DOM.</p>
+
+<button onclick="del()">Remove paragraph</button>
+
+<script>
+function del() {
+  var input = document.getElementById("input");
+  input.remove();
+}
+</script>
+
+</body>
+</html>
