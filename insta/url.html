@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function otherbtn(){
+        // url();
+        document.getElementById("myInput").disabled = false;
+    }
+    function url(){
+        document.getElementById('myInput').value = window.location.href;
+    }
+</script>
+<body>
+    <form id="formulario">
+        <div>
+            <input type="text" name="myInput" id="myInput">
+            <button onclick="url()">GetUrl</button>
+        </div>
+    </form>
+        <button onclick="otherbtn()">Click Other btn</button>
+</body>
+</html>
