@@ -1,2 +1,2 @@
 # Instagram
-Um clone do layout do instagram usando um pouco de javascript
+Um clone do layout do instagram usando um pouco de javascript(in progress)
